@@ -1,0 +1,15 @@
+name: mymavenbuild
+on: push
+
+jobs:
+  installmaven:
+    runs-on: ubuntu_latest
+    # permissions: 
+    #     content: read
+    #     package: write
+
+    steps:
+      - name: setup java and maven
+        uses: actions/setup-java@v3
+      - name: install maven
+        run: sudo yum install maven -y  
