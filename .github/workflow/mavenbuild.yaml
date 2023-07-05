@@ -3,7 +3,7 @@ on: push
 
 jobs:
   installmaven:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     # permissions: 
     #     content: read
     #     package: write
@@ -13,4 +13,5 @@ jobs:
         uses: actions/setup-java@v3
         with:
            distribution: 'temurin'
+           java-version: '17'
            cache: 'maven'
